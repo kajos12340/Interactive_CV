@@ -16,17 +16,13 @@ export const Content = styled.div`
   justify-content: center;
   align-items: center;
   
-  & > div {
+  & > #name-poster {
     text-align: center;
     text-shadow: 0 0 2px #bd5f00;
     padding: 2vw;
     border-radius: 10%;
     background: rgba(6, 6, 6, .8);
     box-shadow: 0 0 3vw 2vw rgb(6, 6, 6);
-    
-    & span {
-      color: #e87400;
-    }
   
     & > #name {
       font-size: 86px;
@@ -39,16 +35,56 @@ export const Content = styled.div`
   
     & > #profession {
       font-size: 54px;
+      line-height: 2em;
+      display: flex;
+      align-items: center;
       
       @media (max-width: 768px) {
         font-size: 32px;
       }
     }
   }
- 
+`;
+
+export const WordScroller = styled.div`
+  color: #bd5f00;
+  margin-left: .5em;
+  height: 2em;
+  overflow: auto;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  & > div {
+    margin-bottom: 1em;
+    overflow: visible;
+    text-align: left;
+  }
 `;
 
 export const Particles = styled(Part)`
   height: 100vh;
   width: 100vw;
+`;
+
+export const ScrollButtonContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1vw;
+  display: flex;
+  justify-content: center;
+  
+  & > svg {
+    font-size: 400%;
+    cursor: pointer;
+    font-weight: 100;
+  }
+
+  @media (max-width: 768px) {
+  padding-bottom: 3vw;
+    & > svg {
+      font-size: 300%;
+    }
+  }
 `;

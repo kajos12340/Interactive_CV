@@ -62,7 +62,8 @@
             ".ts"
           ]
         }
-      ]
+      ],
+      "react/require-default-props": "off"
     }
   },
   "browserslist": {

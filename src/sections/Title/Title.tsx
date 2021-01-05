@@ -1,45 +1,32 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FiArrowDownCircle } from 'react-icons/fi';
+import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
-import scrollTo from '../../helpers/scroller';
+import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 import {
-  Container, Content, Particles, WordScroller, ScrollButtonContainer,
+  Container, Content, Particles, WordScroller,
 } from './Title.styles';
 
+gsap.registerPlugin(ScrollToPlugin);
 const Title = () => {
-  const [currentAdjectiveNumber, setCurrentAdjectiveNumber] = useState(1);
-
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const navigationButtonRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const navigationButton = navigationButtonRef.current;
+    const scroller = scrollerRef.current;
 
+    if (!scroller) return;
+
+    const scrollerItemHeight = scroller?.offsetHeight * 1.5;
     const tl = gsap.timeline({
       repeat: -1,
     });
 
-    tl.to(navigationButton, { y: '-= 10', duration: 0.5, ease: 'easeOut' })
-      .to(navigationButton, { y: '+= 10', duration: 1, ease: 'elastic.out(1, 0.3)' });
-  }, [navigationButtonRef]);
-
-  const scroll = () => {
-    const scroller = scrollerRef.current;
-    scroller?.scroll({
-      top: currentAdjectiveNumber === 4 ? 1 : currentAdjectiveNumber * scroller.offsetHeight * 1.5,
-      left: 0,
-      behavior: 'smooth',
-    });
-    setCurrentAdjectiveNumber((prev) => (prev === 4 ? 1 : prev + 1));
-  };
-
-  useEffect(() => {
-    const scrollTimeout = setInterval(scroll, 1500);
-
-    return () => clearTimeout(scrollTimeout);
-  }, [scrollerRef, currentAdjectiveNumber]);
+    tl.to(scroller, { scrollTo: scrollerItemHeight, duration: 0.5, delay: 1 })
+      .to(scroller, { scrollTo: scrollerItemHeight * 2, duration: 0.5, delay: 1 })
+      .to(scroller, { scrollTo: scrollerItemHeight * 3, duration: 0.5, delay: 1 })
+      .to(scroller, { scrollTo: 0, duration: 0.5, delay: 1 });
+  }, [scrollerRef]);
 
   return (
     <Container id="title">
@@ -102,10 +89,8 @@ const Title = () => {
             </WordScroller>
           </div>
         </div>
-        <ScrollButtonContainer ref={navigationButtonRef}>
-          <FiArrowDownCircle onClick={() => scrollTo('about')} />
-        </ScrollButtonContainer>
       </Content>
+      <NextSectionButton to="about" />
     </Container>
   );
 };

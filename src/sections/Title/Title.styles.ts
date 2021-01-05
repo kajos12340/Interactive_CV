@@ -67,24 +67,3 @@ export const Particles = styled(Part)`
   height: 100vh;
   width: 100vw;
 `;
-
-export const ScrollButtonContainer = styled.div`
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 1vw;
-  display: flex;
-  justify-content: center;
-  
-  & > svg {
-    font-size: 400%;
-    cursor: pointer;
-    font-weight: 100;
-  }
-
-  @media (max-width: 768px) {
-  padding-bottom: 3vw;
-    & > svg {
-      font-size: 300%;
-    }
-  }
-`;

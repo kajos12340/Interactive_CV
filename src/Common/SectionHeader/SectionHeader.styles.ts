@@ -3,14 +3,25 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: relative;
   transform: rotate(2deg);
+  max-width: 100vw;
+  overflow: hidden;
+  
+  padding: 50px 20%;
+  @media (max-width: 768px) {
+    padding: 20px 10%;
+  }
 `;
 
 export const Banner = styled.div`
-  margin: 50px 10%;
-  width: 80%;
-  height: 200px;
+  height: 100px;
   transform: skew(20deg);
   background: #bd5f00;
+  padding: 20px 10%;
+  
+  @media (max-width: 768px) {
+    max-height: 100px;
+    padding: 0 10%;
+  }
 `;
 
 export const Title = styled.div`
@@ -26,4 +37,8 @@ export const Title = styled.div`
   
   transform: rotate(-2deg);
   font-size: 54px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
 `;

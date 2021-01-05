@@ -4,7 +4,8 @@ import styled from 'styled-components';
 export const ScrollButtonContainer = styled.div<{ rightAligned: boolean }>`
   position: absolute;
   width: calc(100% - 2vw);
-  bottom: 0;
+  top: 90vh;
+  bottom: unset;
   padding: 0 1vw 1vw 1vw;
   display: flex;
   justify-content: ${(props) => (props.rightAligned ? 'flex-end' : 'center')};
@@ -16,7 +17,10 @@ export const ScrollButtonContainer = styled.div<{ rightAligned: boolean }>`
   }
 
   @media (max-width: 768px) {
-  padding-bottom: 3vw;
+  padding-top: 3vw;
+  bottom: 0;
+  top: unset;
+  
     & svg {
       font-size: 300%;
     }

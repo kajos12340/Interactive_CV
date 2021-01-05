@@ -9,6 +9,6 @@ export const Section = styled.section<{ primaryColor: boolean }>`
   background: ${(props) => (props.primaryColor ? '#060606' : '#0d0d0d')};
   
   @media (max-width: 768px) {
-    padding-bottom: 50px;
+    padding-bottom: 100px;
   }
 `;

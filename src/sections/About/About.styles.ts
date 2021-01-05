@@ -62,7 +62,7 @@ export const Description = styled.div`
   padding: 1vw;
   font-size: 20px;
   line-height: 1.5;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   
   & span {
     color: #bd5f00;

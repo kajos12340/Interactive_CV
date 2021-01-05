@@ -27,7 +27,7 @@ const About = () => (
         <br />
         I&apos;ve graduated in Warsaw University of Life Sciences on Informatics with
         <span> master degree </span>
-        in 2019.
+        in 2020.
         My career has began quite long before graduation,
         as I decided to start work during my studies, to test and improve
         my knowledge and abilities.

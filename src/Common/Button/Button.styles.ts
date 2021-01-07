@@ -5,7 +5,7 @@ export const Button = styled.div`
   cursor: pointer;
   padding: 1vw;
   transition-duration: .5s;
-  font-size: 18px;
+  font-size: 20px;
   display: flex;
   align-items: center;
   
@@ -18,7 +18,7 @@ export const Button = styled.div`
   }
   
   @media (max-width: 768px) {
-    padding: 2vw;
+    padding: 3.5vw;
   }
   
   & > svg {
@@ -38,7 +38,7 @@ export const DoubleButton = styled(Button)`
     padding: 1vw;
     
     @media (max-width: 768px) {
-      padding: 2vw;
+      padding: 3.5vw;
     }
     
     &:hover {

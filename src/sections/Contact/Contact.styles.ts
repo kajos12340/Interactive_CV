@@ -10,7 +10,7 @@ export const Container = styled.div`
   @media (max-width: 768px) {
     margin: 0 5%;
     width: 90%;
-    font-size: 18px;
+    font-size: 16px;
   }
   
   & span {
@@ -46,7 +46,7 @@ export const CopiedAlert = styled.div`
   font-size: 18px;
   width: auto;
   max-width: 50%;
-  right: -100%;
+  right: -10%;
   margin: 1% 10px;
   top: 0;
   

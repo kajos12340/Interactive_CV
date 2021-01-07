@@ -34,7 +34,7 @@ const Contact = () => {
         autoAlpha: 1, right: '1%', duration: 0.5,
       })
       .to(alert, {
-        autoAlpha: 0, right: '-100%', delay: 1,
+        autoAlpha: 0, right: '-10%', delay: 1,
       });
   };
 
@@ -62,7 +62,7 @@ const Contact = () => {
           <span> question</span>
           ?
           <br />
-          Feel free to contact me, unless you are spam
+          Feel free to contact me, unless you are a spam
           <span> :)</span>
         </h1>
         <Buttons>

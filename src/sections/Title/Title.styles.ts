@@ -50,7 +50,7 @@ export const WordScroller = styled.div`
   color: #bd5f00;
   margin-left: .5em;
   height: 2em;
-  overflow: auto;
+  overflow: hidden;
   
   &::-webkit-scrollbar {
     display: none;

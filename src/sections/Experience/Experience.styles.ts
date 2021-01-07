@@ -69,6 +69,7 @@ export const Time = styled(CenteredDiv)`
 `;
 
 export const Title = styled(CenteredDiv)`
+  font-weight: 500;
   grid-area: title;
   font-size: 20px;
   color: #bd5f00;

@@ -10,7 +10,7 @@ export const SkillTilesContainer = styled.div`
   
   @media (max-width: 768px) {
     flex-direction: column;
-    margin: 0 3%;
+    margin: 0 3% 15px 3%;
     width: 94%;
     
     & > div {

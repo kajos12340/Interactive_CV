@@ -1,15 +1,21 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: relative;
-  transform: rotate(1.5deg);
-  max-width: 100vw;
+  max-width: 100%;
   overflow: hidden;
-  
-  padding: 40px 20%;
-  @media (max-width: 768px) {
-    padding: 20px 10%;
+
+  & > div {
+    position: relative;
+    transform: rotate(1.5deg);
+    max-width: 100vw;
+    overflow: hidden;
+    
+    padding: 40px 20%;
+    @media (max-width: 768px) {
+      padding: 20px 10%;
+  } 
   }
+
 `;
 
 export const Banner = styled.div`

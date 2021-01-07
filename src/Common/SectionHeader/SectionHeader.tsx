@@ -8,10 +8,12 @@ interface SectionHeaderProps {
 
 const SectionHeader = ({ title }: SectionHeaderProps) => (
   <Container>
-    <Banner />
-    <Title>
-      {title}
-    </Title>
+    <div>
+      <Banner />
+      <Title>
+        {title}
+      </Title>
+    </div>
   </Container>
 );
 

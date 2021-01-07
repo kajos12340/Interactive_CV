@@ -37,6 +37,10 @@ export const DoubleButton = styled(Button)`
   & > div {
     padding: 1vw;
     
+    @media (max-width: 768px) {
+      padding: 2vw;
+    }
+    
     &:hover {
       background: #dc7900;
     }

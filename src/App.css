@@ -6,11 +6,13 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   line-height: 1.5;
   letter-spacing: 0.8px;
-
-  box-sizing: border-box;
 
   background: #060606;
   color: #eeeeee;

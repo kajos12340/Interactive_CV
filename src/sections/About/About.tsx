@@ -1,12 +1,12 @@
 import React from 'react';
 
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
-
 import { Section } from '../../Common/Section/Section';
+import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
+
 import {
   Content, Photo, Description, PhotoContainer,
 } from './About.styles';
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 const About = () => (
   <Section id="about" primaryColor={false} noMinHeight={false}>

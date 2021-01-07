@@ -21,11 +21,37 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-  
   & > div {
     margin-right: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    flex-direction: column;
+    
+    &>div {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
+  }
+`;
+
+export const CopiedAlert = styled.div`
+  position: fixed;
+  box-shadow: -3px 3px 10px black;
+  opacity: 0;
+  border-radius: 15px;
+  padding: 1vw;
+  background-color: #bd5f00;
+  font-size: 18px;
+  width: auto;
+  max-width: 50%;
+  right: -100%;
+  margin: 1% 10px;
+  top: 0;
+  
+  @media (max-width: 768px) {
+    padding: 3vw;    
+    margin: 1% 2%;
+    max-width: 96%;
   }
 `;

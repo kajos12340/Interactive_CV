@@ -7,18 +7,21 @@ import { Divider } from '../Common/Divider/Divider';
 import Projects from '../sections/Projects/Projects';
 import Hobby from '../sections/Hobby/Hobby';
 import Contact from '../sections/Contact/Contact';
+import Experience from '../sections/Experience/Experience';
 
 const Content = () => (
   <main>
     <Title />
     <About />
     <Divider revert={false} />
+    <Experience />
+    <Divider revert />
     <Skills />
-    <Divider revert />
-    <Projects />
     <Divider revert={false} />
-    <Hobby />
+    <Projects />
     <Divider revert />
+    <Hobby />
+    <Divider revert={false} />
     <Contact />
   </main>
 );

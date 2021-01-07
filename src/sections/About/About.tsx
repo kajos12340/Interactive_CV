@@ -43,7 +43,7 @@ const About = () => (
         than terrified.
       </Description>
     </Content>
-    <NextSectionButton to="skills" rightAligned />
+    <NextSectionButton to="experience" rightAligned />
   </Section>
 );
 

@@ -5,7 +5,7 @@ import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton'
 import { Section } from '../../Common/Section/Section';
 
 const Hobby = () => (
-  <Section id="hobby" primaryColor>
+  <Section id="hobby" primaryColor={false}>
     <SectionHeader title="Hobby" />
     Hobby!!!!
     <NextSectionButton to="contact" rightAligned />

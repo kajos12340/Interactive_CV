@@ -5,7 +5,7 @@ export const SkillTilesContainer = styled.div`
   width: 80%;
   margin: 0 10% 50px 10%;
   display: flex;
-  background: #0d0d0d;
+  background: #1a1a1a;
   border-radius: 15px;
   
   @media (max-width: 768px) {

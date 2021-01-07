@@ -53,7 +53,7 @@ const projectsData: SingleProject[] = [
 ];
 
 const Projects = () => (
-  <Section id="projects" primaryColor={false}>
+  <Section id="projects" primaryColor>
     <SectionHeader title="Projects" />
     <Slider data={projectsData} />
     <NextSectionButton to="hobby" rightAligned />

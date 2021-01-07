@@ -14,18 +14,19 @@ const Title = () => {
 
   useEffect(() => {
     const scroller = scrollerRef.current;
+    const singleScrollerChild = scroller?.children[0] as HTMLElement;
 
-    if (!scroller) return;
+    if (!scroller || !singleScrollerChild) return;
 
-    const scrollerItemHeight = scroller?.offsetHeight * 1.5;
+    const scrollerItemHeight = singleScrollerChild.offsetHeight;
     const tl = gsap.timeline({
       repeat: -1,
     });
 
-    tl.to(scroller, { scrollTo: scrollerItemHeight, duration: 0.5, delay: 1 })
-      .to(scroller, { scrollTo: scrollerItemHeight * 2, duration: 0.5, delay: 1 })
-      .to(scroller, { scrollTo: scrollerItemHeight * 3, duration: 0.5, delay: 1 })
-      .to(scroller, { scrollTo: 0, duration: 0.5, delay: 1 });
+    tl.to(scroller, { y: -scrollerItemHeight, duration: 0.5, delay: 1 })
+      .to(scroller, { y: -scrollerItemHeight * 2, duration: 0.5, delay: 1 })
+      .to(scroller, { y: -scrollerItemHeight * 3, duration: 0.5, delay: 1 })
+      .to(scroller, { y: 0, duration: 0.5, delay: 1 });
   }, [scrollerRef]);
 
   return (
@@ -81,11 +82,13 @@ const Title = () => {
           <div id="profession">
             Front-end
             {' '}
-            <WordScroller ref={scrollerRef}>
-              <div>developer</div>
-              <div>engineer</div>
-              <div>lover</div>
-              <div>addict</div>
+            <WordScroller>
+              <div ref={scrollerRef}>
+                <div>developer</div>
+                <div>engineer</div>
+                <div>lover</div>
+                <div>addict</div>
+              </div>
             </WordScroller>
           </div>
         </div>

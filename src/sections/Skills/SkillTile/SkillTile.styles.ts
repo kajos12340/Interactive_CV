@@ -34,7 +34,10 @@ export const Icon = styled.div`
       transform: scale(1);
     }
   }
+  
+  & > svg {
     animation: 3s infinite iconAnimation ease-in-out;
+  }
 `;
 
 export const Technologies = styled.div`

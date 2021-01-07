@@ -8,7 +8,7 @@ import liftItImg from '../../assets/liftit.jpg';
 import shopImg from '../../assets/shop.jpg';
 import cvImg from '../../assets/cv.jpg';
 
-import { Button } from './Projects.styles';
+import Button from '../../Common/Button/Button';
 
 const openHref = (url: string) => {
   window.open(url);
@@ -53,7 +53,7 @@ const projectsData: SingleProject[] = [
 ];
 
 const Projects = () => (
-  <Section id="projects" primaryColor>
+  <Section id="projects" primaryColor noMinHeight={false}>
     <SectionHeader title="Projects" />
     <Slider data={projectsData} />
     <NextSectionButton to="hobby" rightAligned />

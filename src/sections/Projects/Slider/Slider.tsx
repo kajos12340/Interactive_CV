@@ -61,7 +61,7 @@ const Slider = ({ data }: SliderProps) => {
       <Slides>
         <div ref={contentRef}>
           {data.map((item) => (
-            <Slide>
+            <Slide key={item.img}>
               <Img photo={item.img} />
               <Title>
                 {item.title}

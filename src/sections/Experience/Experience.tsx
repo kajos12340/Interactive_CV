@@ -33,13 +33,13 @@ const data: TileLineItem[] = [
 ];
 
 const Experience = () => (
-  <Section id="experience" primaryColor>
+  <Section id="experience" primaryColor noMinHeight={false}>
     <SectionHeader title="Timeline" />
     <Content>
       <Line />
       <Nodes>
         {data.map((item) => (
-          <Node>
+          <Node key={item.title}>
             <Dot />
             <Time>{item.time}</Time>
             <Title>

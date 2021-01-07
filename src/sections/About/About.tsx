@@ -9,7 +9,7 @@ import {
 import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 const About = () => (
-  <Section id="about" primaryColor={false}>
+  <Section id="about" primaryColor={false} noMinHeight={false}>
     <SectionHeader title="About me" />
     <Content>
       <PhotoContainer>

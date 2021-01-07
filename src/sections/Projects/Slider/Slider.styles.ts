@@ -6,8 +6,8 @@ export const Container = styled.div`
   margin: 0 15% 50px 15%;
   
   @media (max-width: 768px) {
-    margin: 0 10%;
-    width: 80%;
+    margin: 0 5%;
+    width: 90%;
   }
 `;
 
@@ -53,6 +53,9 @@ const Switch = styled.div`
   @media (max-width: 768px) {
     width: 10%;
     font-size: 32px;
+    align-items: flex-end;
+    bottom: -4vw;
+    top: unset;
   }
 `;
 
@@ -60,7 +63,7 @@ export const SwitchLeft = styled(Switch)`
   left: -5%;
   
   @media (max-width: 768px) {
-    left: -10%;
+    left: -5%;
   }
 `;
 
@@ -68,7 +71,7 @@ export const SwitchRight = styled(Switch)`
   right: -5%;
   
   @media (max-width: 768px) {
-    right: -10%;
+    right: -5%;
   }
 `;
 

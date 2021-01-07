@@ -10,7 +10,7 @@ import SkillTile from './SkillTile/SkillTile';
 import { SkillTilesContainer } from './Skills.styles';
 
 const Skills = () => (
-  <Section id="skills" primaryColor={false}>
+  <Section id="skills" primaryColor={false} noMinHeight={false}>
     <SectionHeader title="Skills" />
     <SkillTilesContainer>
       <SkillTile

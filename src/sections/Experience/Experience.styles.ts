@@ -35,7 +35,7 @@ export const Node = styled.div`
   
   grid-template: "dot time title" auto
                  ". description description" auto
-                 / 30px auto 1fr;
+                 / 30px 15% 1fr;
   grid-column-gap: 10px;                 
 
   @media (max-width: 768px) {

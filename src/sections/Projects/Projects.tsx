@@ -16,7 +16,7 @@ const openHref = (url: string) => {
 
 const projectsData: SingleProject[] = [
   {
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: 'LiftIt is application I\'ve created as my master degree. It\'s purpose is to plan, process, manage and overview powerlifting training, but due to it\'s architecture and solutions, it can be used for any type of training. Client side of this application is Progressive Web App created using TypeScript, Next.JS, Redux, Ant Design and Styled Components. Client side is REST API created with TypeScript, Node.js (Express) and MongoDB. Modules I\'m the most proud of are three stages training plan creation form, which enables to plan every aspect of training, training session which tells everything about current step of training, count reps and rest, statistics module, enabling us to continuously overview our progress and finally JWT Authorization.',
     img: liftItImg,
     links: (
       <>
@@ -28,7 +28,7 @@ const projectsData: SingleProject[] = [
     title: 'LiftIT - body building training app',
   },
   {
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: 'I have created this application to make it easier to coordinate shopping with my fiancee. It enables us to add, remove and status products in real time, which makes our shopping much easier. To acquire this purpose application is based on WebSocket technology. Client site was created with TypeScript, React, Material-UI and Redux. Server side is Express REST API and SQL database.',
     img: shopImg,
     links: (
       <>
@@ -37,18 +37,15 @@ const projectsData: SingleProject[] = [
         <Button onClick={() => openHref('https://google.pl/')}>Github Back-end</Button>
       </>
     ),
-    title: 'Epic shopping list',
+    title: 'My shopping list',
   },
   {
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
+    description: 'This is the website you are currently at! I\'ve had really much fun creating this project, as I decided to avoid using (nearly) any component library as Reactstrap, And Design or Material-UI. It is simple SPA, meant to be my interactive CV created in recruitment purposes.',
     img: cvImg,
     links: (
-      <>
-        <Button onClick={() => openHref('https://google.pl/')}>Website</Button>
-        <Button onClick={() => openHref('https://google.pl/')}>Github Front-end</Button>
-      </>
+      <Button onClick={() => openHref('https://github.com/kajos12340/Interactive_CV')}>Github</Button>
     ),
-    title: 'Interactive CV',
+    title: 'Personal Website',
   },
 ];
 

@@ -93,7 +93,7 @@ export const Slide = styled.div`
   grid-template: "photo title" 15%
                  "photo description" 70%
                  "photo link" 15%
-                 / 50% 50%;
+                 / 1fr 1fr;
   grid-column-gap: 1vw;
   
   @media (max-width: 768px) {

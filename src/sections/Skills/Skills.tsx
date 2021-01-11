@@ -41,13 +41,13 @@ const Skills = () => (
           </>
         )}
         icon={<FaReact />}
-        technologies={['React', 'JavaScript', 'TypeScript', 'Redux', 'HTML', 'CSS', 'SCSS', 'Boostrap', 'Styled Components']}
+        technologies={['React', 'JavaScript', 'TypeScript', 'Redux', 'HTML', 'CSS', 'SCSS', 'Boostrap', 'Styled Components', 'GSAP']}
       />
       <SkillTile
         title="Other"
-        description="hadhashdh ashdhashd hashd ahadhashdh ashdhashd hashd ahadhashdh ashdhashd hashd ahadhashdh ashdhashd hashd ahadhashdh ashdhashd hashd ahadhashdh ashdhashd hashd a"
+        description="Tools I use to improve quality of my code, automate delivery and organize workflow. I&nbsp;couldn't imagine developing any application without proper decomposing, planning as well as continuous integration and delivery."
         icon={<BiGitPullRequest />}
-        technologies={['Git', 'Jira', 'Bitbucket', 'Github', 'Git Flow']}
+        technologies={['Git', 'Jira', 'Bitbucket', 'Github', 'Git Flow', 'Netlify']}
       />
     </SkillTilesContainer>
     <NextSectionButton to="projects" rightAligned />

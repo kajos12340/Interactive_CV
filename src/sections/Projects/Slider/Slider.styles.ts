@@ -39,6 +39,7 @@ const Switch = styled.div`
   width: 5%;
   height: 100%;
   top: 0;
+  z-index: 1;
   
   position: absolute;
   display: flex;
@@ -51,7 +52,7 @@ const Switch = styled.div`
   }
   
   @media (max-width: 768px) {
-    width: 10%;
+    width: 20%;
     font-size: 32px;
     align-items: flex-end;
     bottom: -4vw;

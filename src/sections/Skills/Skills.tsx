@@ -51,6 +51,7 @@ const Skills = () => (
       />
     </SkillTilesContainer>
     <NextSectionButton to="projects" rightAligned />
+    <br />
   </Section>
 );
 

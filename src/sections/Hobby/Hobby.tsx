@@ -39,7 +39,7 @@ const Hobby = () => {
             title="Video"
             width={videoWidth}
             height={videoWidth * 0.5625}
-            src="https://www.youtube.com/embed/diyqLSP1kUg"
+            src="https://www.youtube.com/embed/5BcZ3bXm-v0"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

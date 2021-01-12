@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // eslint-disable-next-line import/prefer-default-export
-export const Button = styled.div`
+export const Button = styled.button`
   cursor: pointer;
   padding: 1vw;
   transition-duration: .5s;
@@ -9,6 +9,7 @@ export const Button = styled.div`
   display: flex;
   align-items: center;
   
+  color: white;
   background: #bd5f00;
   border: solid 2px #bd5f00;
   border-radius: 5px;

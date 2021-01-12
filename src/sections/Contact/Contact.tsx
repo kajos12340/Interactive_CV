@@ -34,7 +34,7 @@ const Contact = () => {
         autoAlpha: 1, right: '1%', duration: 0.5,
       })
       .to(alert, {
-        autoAlpha: 0, right: '-10%', delay: 1,
+        autoAlpha: 0, right: '-10%', delay: 1, zIndex: -1,
       });
   };
 
@@ -58,7 +58,7 @@ const Contact = () => {
           <span> job offer</span>
           ?
           <br />
-          Or you simply have some
+          Or you simply have any
           <span> question</span>
           ?
           <br />

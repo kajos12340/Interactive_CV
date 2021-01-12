@@ -38,6 +38,7 @@ export const Buttons = styled.div`
 
 export const CopiedAlert = styled.div`
   position: fixed;
+  z-index: -1;
   box-shadow: -3px 3px 10px black;
   opacity: 0;
   border-radius: 15px;

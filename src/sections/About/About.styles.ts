@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import photo from '../../assets/hehe.jpg';
+import photo from '../../assets/me.jpg';
 
 export const Content = styled.div`
   display: flex;

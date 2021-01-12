@@ -29,6 +29,8 @@ const Contact = () => {
     const alert = alertRef.current;
     const tl = gsap.timeline();
 
+    gsap.set(alert, { zIndex: 2 });
+
     tl
       .to(alert, {
         autoAlpha: 1, right: '1%', duration: 0.5,

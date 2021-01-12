@@ -23,7 +23,51 @@ const Slider = ({ data }: SliderProps) => {
 
   const dotsRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const touchPosition = useRef({
+    start: 0,
+    end: 0,
+  });
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return () => null;
+
+    const touchStart = (e: TouchEvent) => {
+      const touchX = e.touches[0].clientX;
+      touchPosition.current = {
+        ...touchPosition.current,
+        start: touchX,
+      };
+    };
+
+    const touchMove = (e: TouchEvent) => {
+      const touchX = e.touches[0].clientX;
+      touchPosition.current = {
+        ...touchPosition.current,
+        end: touchX,
+      };
+    };
+
+    const touchEnd = () => {
+      const { start: touchStartX, end: touchEndX } = touchPosition.current;
+
+      if (touchEndX - touchStartX > 20) {
+        handleLeftSwitchClick();
+      } else if (touchStartX - touchEndX > 20) {
+        handleRightSwitchClick();
+      }
+    };
+
+    content.addEventListener('touchstart', touchStart);
+    content.addEventListener('touchmove', touchMove);
+    content.addEventListener('touchend', touchEnd);
+
+    return () => {
+      content.removeEventListener('touchstart', touchStart);
+      content.removeEventListener('touchmove', touchMove);
+      content.removeEventListener('touchend', touchEnd);
+    };
+  }, [contentRef, touchPosition, currentElementIdx]);
 
   useEffect(() => {
     if (!dotsRef.current || !contentRef.current) return;
@@ -47,17 +91,21 @@ const Slider = ({ data }: SliderProps) => {
   }, [currentDataTab]);
 
   const handleLeftSwitchClick = () => {
+    if (currentElementIdx === 0) return;
+
     setCurrentTab(data[currentElementIdx - 1].title);
     setCurrentElementIdx((prev) => prev - 1);
   };
 
   const handleRightSwitchClick = () => {
+    if (currentElementIdx === data.length - 1) return;
+
     setCurrentTab(data[currentElementIdx + 1].title);
     setCurrentElementIdx((prev) => prev + 1);
   };
 
   return (
-    <Container ref={containerRef}>
+    <Container>
       <Slides>
         <div ref={contentRef}>
           {data.map((item) => (

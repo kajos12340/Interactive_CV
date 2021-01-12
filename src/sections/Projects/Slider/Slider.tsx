@@ -51,9 +51,9 @@ const Slider = ({ data }: SliderProps) => {
     const touchEnd = () => {
       const { start: touchStartX, end: touchEndX } = touchPosition.current;
 
-      if (touchEndX - touchStartX > 20) {
+      if (touchEndX - touchStartX > 70) {
         handleLeftSwitchClick();
-      } else if (touchStartX - touchEndX > 20) {
+      } else if (touchStartX - touchEndX > 70) {
         handleRightSwitchClick();
       }
     };

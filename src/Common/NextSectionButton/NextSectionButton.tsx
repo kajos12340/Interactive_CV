@@ -30,16 +30,13 @@ const NextSectionButton = ({
 
   useEffect(() => {
     const idx = sections.findIndex((i) => i === currentSection);
-    console.log(idx, sections.length - 1);
     if (idx === sections.length - 1) {
-      console.log(sections, sections[0]);
       setNextSection(sections[0]);
     } else {
       setNextSection(sections[idx + 1]);
     }
   }, [sections, currentSection]);
 
-  console.log(nextSection);
   return (
     <ScrollButtonContainer reverse={nextSection === 'title'}>
       <div ref={navigationButtonRef}>

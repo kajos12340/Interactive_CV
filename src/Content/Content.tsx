@@ -71,6 +71,10 @@ const Content = () => {
     };
   }, [mainRef]);
 
+  useEffect(() => {
+    updateHash('title');
+  }, []);
+
   return (
     <main ref={mainRef}>
       <NextSectionButton sections={sections} currentSection={currentSection} />

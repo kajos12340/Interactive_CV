@@ -1,7 +1,6 @@
-import gsap from 'gsap';
-
 const scrollTo = (elementId: string) => {
-  gsap.to(window, { duration: 0.5, delay: 0.1, scrollTo: { y: `#${elementId}` } });
+  const element = document.getElementById(elementId);
+  element?.scrollIntoView();
 };
 
 export default scrollTo;

@@ -3,21 +3,21 @@ import React from 'react';
 import { Button as StyledButton, DoubleButton } from './Button.styles';
 
 interface ButtonProps {
-  onClick: () => any,
+  href: string,
   onClick2?: () => any,
   children: String | React.ReactNode,
   secondaryChildren?: String | React.ReactNode,
 }
 
 const Button = ({
-  onClick, onClick2, children, secondaryChildren,
+  href, onClick2, children, secondaryChildren,
 }: ButtonProps) => {
   if (onClick2 && secondaryChildren) {
     return (
       <DoubleButton>
-        <div onClick={onClick}>
+        <a href={href} target="_blank" rel="noreferrer">
           {children}
-        </div>
+        </a>
         <div onClick={onClick2}>
           {secondaryChildren}
         </div>
@@ -26,7 +26,7 @@ const Button = ({
   }
 
   return (
-    <StyledButton onClick={onClick}>
+    <StyledButton target="_blank" rel="noreferrer" href={href}>
       {children}
     </StyledButton>
   );

@@ -10,18 +10,6 @@ import { Container, Buttons, CopiedAlert } from './Contact.styles';
 
 const mail = 'piotr.kajus@gmail.com';
 
-const mailto = () => {
-  window.location.href = `mailto:${mail}`;
-};
-
-const redirectToGithub = () => {
-  window.open('https://github.com/kajos12340');
-};
-
-const redirectToLinedIn = () => {
-  window.open('https://www.linkedin.com/in/piotr-kajka-3875b3151/');
-};
-
 const Contact = () => {
   const alertRef = useRef<HTMLDivElement>(null);
 
@@ -68,15 +56,15 @@ const Contact = () => {
           <span> :)</span>
         </h1>
         <Buttons>
-          <Button onClick2={copyMail} onClick={mailto} secondaryChildren={<BiCopy />}>
+          <Button onClick2={copyMail} href={`mailto:${mail}`} secondaryChildren={<BiCopy />}>
             Mail to me
           </Button>
-          <Button onClick={redirectToGithub}>
+          <Button href="https://github.com/kajos12340">
             Github
             {' '}
             <AiOutlineGithub />
           </Button>
-          <Button onClick={redirectToLinedIn}>
+          <Button href="https://www.linkedin.com/in/piotr-kajka-3875b3151/">
             LinkedIn
             {' '}
             <AiFillLinkedin />

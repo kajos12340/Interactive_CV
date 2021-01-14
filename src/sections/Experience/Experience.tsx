@@ -2,7 +2,6 @@ import React from 'react';
 
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import { Section } from '../../Common/Section/Section';
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 import {
   Content, Line, Node, Nodes, Dot, Description, Title, Time,
@@ -60,7 +59,7 @@ const Experience = () => (
         ))}
       </Nodes>
     </Content>
-    <NextSectionButton to="skills" rightAligned />
+    {/* <NextSectionButton to="skills" rightAligned /> */}
   </Section>
 );
 

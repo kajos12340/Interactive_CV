@@ -22,14 +22,14 @@ export const Buttons = styled.div`
   display: flex;
   align-items: center;
   
-  & > button {
+  & > a, & > div {
     margin-right: 20px;
   }
   
   @media (max-width: 768px) {
     flex-direction: column;
     
-    &>button {
+    &>a, & > div {
       margin-bottom: 10px;
       margin-right: 0;
     }

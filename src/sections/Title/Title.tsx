@@ -1,20 +1,19 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 import {
   Container, Content, Particles, WordScroller,
 } from './Title.styles';
 
-gsap.registerPlugin(ScrollToPlugin);
 const Title = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const tlRef = useRef(null);
 
-  useEffect(() => {
+  const setupScroller = () => {
     const scroller = scrollerRef.current;
     const singleScrollerChild = scroller?.children[0] as HTMLElement;
+    // @ts-ignore
+    tlRef.current?.clear();
 
     if (!scroller || !singleScrollerChild) return;
 
@@ -22,11 +21,23 @@ const Title = () => {
     const tl = gsap.timeline({
       repeat: -1,
     });
+    // @ts-ignore
+    tlRef.current = tl;
 
     tl.to(scroller, { y: -scrollerItemHeight, duration: 0.5, delay: 1 })
       .to(scroller, { y: -scrollerItemHeight * 2, duration: 0.5, delay: 1 })
       .to(scroller, { y: -scrollerItemHeight * 3, duration: 0.5, delay: 1 })
       .to(scroller, { y: 0, duration: 0.5, delay: 1 });
+  };
+
+  useEffect(() => {
+    setupScroller();
+
+    window.addEventListener('resize', setupScroller);
+
+    return () => {
+      window.removeEventListener('resize', setupScroller);
+    };
   }, [scrollerRef]);
 
   return (
@@ -93,7 +104,7 @@ const Title = () => {
           </div>
         </div>
       </Content>
-      <NextSectionButton to="about" />
+      {/* <NextSectionButton to="about" /> */}
     </Container>
   );
 };

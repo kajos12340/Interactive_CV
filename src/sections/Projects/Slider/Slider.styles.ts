@@ -136,14 +136,14 @@ export const Buttons = styled.div`
   grid-area: link;
   display: flex;
   align-items: center;
-  & > button {
+  & > a {
     margin-right: 10px;
   }
   
   @media (max-width: 768px) {
     flex-direction: column;
     margin-bottom: 20px;
-    & > button {
+    & > a {
       margin-right: 0;
       margin-top: 10px;
       margin-bottom: 10px;

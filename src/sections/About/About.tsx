@@ -2,7 +2,6 @@ import React from 'react';
 
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import { Section } from '../../Common/Section/Section';
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 
 import {
   Content, Photo, Description, PhotoContainer,
@@ -43,7 +42,7 @@ const About = () => (
         than terrified.
       </Description>
     </Content>
-    <NextSectionButton to="experience" rightAligned />
+    {/* <NextSectionButton to="experience" rightAligned /> */}
   </Section>
 );
 

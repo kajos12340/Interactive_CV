@@ -3,7 +3,6 @@ import React, {
 } from 'react';
 
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 import { Section } from '../../Common/Section/Section';
 import Icons from './Icons/Icons';
 
@@ -49,7 +48,7 @@ const Hobby = () => {
           <Icons />
         </MobileIcons>
       </Content>
-      <NextSectionButton to="contact" rightAligned />
+      {/* <NextSectionButton to="contact" rightAligned /> */}
     </Section>
   );
 };

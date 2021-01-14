@@ -3,7 +3,6 @@ import { FaNodeJs, FaReact } from 'react-icons/fa';
 import { BiGitPullRequest } from 'react-icons/bi';
 
 import { Section } from '../../Common/Section/Section';
-import NextSectionButton from '../../Common/NextSectionButton/NextSectionButton';
 import SectionHeader from '../../Common/SectionHeader/SectionHeader';
 import SkillTile from './SkillTile/SkillTile';
 
@@ -50,7 +49,7 @@ const Skills = () => (
         technologies={['Git', 'Jira', 'Bitbucket', 'Github', 'Git Flow', 'Netlify']}
       />
     </SkillTilesContainer>
-    <NextSectionButton to="projects" rightAligned />
+    {/* <NextSectionButton to="projects" rightAligned /> */}
     <br />
   </Section>
 );

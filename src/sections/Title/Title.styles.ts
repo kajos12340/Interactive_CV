@@ -3,6 +3,7 @@ import Part from 'react-particles-js';
 
 export const Container = styled.section`
   position: relative;
+  border-bottom: solid 1px #bd5f00;
 `;
 
 export const Content = styled.div`

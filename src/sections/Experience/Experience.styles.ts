@@ -31,12 +31,12 @@ export const Nodes = styled.div`
 export const Node = styled.div`
   display: grid;
   z-index: 1;
-  margin: 10px 0;
+  margin: 15px 0;
   
   grid-template: "dot time title" auto
                  ". description description" auto
                  / 30px 15% 1fr;
-  grid-column-gap: 10px;                 
+  grid-column-gap: 10px;            
 
   @media (max-width: 768px) {
     grid-template: "dot time" auto

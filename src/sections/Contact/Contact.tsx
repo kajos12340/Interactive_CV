@@ -39,7 +39,7 @@ const Contact = () => {
   };
 
   return (
-    <Section id="contact" primaryColor noMinHeight>
+    <Section id="contact" primaryColor contactHeight>
       <Container>
         <h1>
           Do you like my website?

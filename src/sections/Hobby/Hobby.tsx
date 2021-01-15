@@ -29,7 +29,7 @@ const Hobby = () => {
   }, [videoContainerRef]);
 
   return (
-    <Section id="hobby" primaryColor={false} noMinHeight={false}>
+    <Section id="hobby" primaryColor={false} contactHeight={false}>
       <SectionHeader title="Hobby" />
       <Content>
         <Icons />

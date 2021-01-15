@@ -8,7 +8,7 @@ import {
 } from './About.styles';
 
 const About = () => (
-  <Section id="about" primaryColor={false} noMinHeight={false}>
+  <Section id="about" primaryColor={false} contactHeight={false}>
     <SectionHeader title="About me" />
     <Content>
       <PhotoContainer>

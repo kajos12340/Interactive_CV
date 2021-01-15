@@ -42,7 +42,7 @@ const data: TileLineItem[] = [
 ];
 
 const Experience = () => (
-  <Section id="experience" primaryColor noMinHeight={false}>
+  <Section id="experience" primaryColor contactHeight={false}>
     <SectionHeader title="Timeline" />
     <Content>
       <Line />

@@ -8,7 +8,6 @@ import Projects from '../sections/Projects/Projects';
 import Hobby from '../sections/Hobby/Hobby';
 import Contact from '../sections/Contact/Contact';
 import Experience from '../sections/Experience/Experience';
-import { updateHash } from '../helpers/scroller';
 import NextSectionButton from '../Common/NextSectionButton/NextSectionButton';
 
 const getThresholdArray = () => {
@@ -52,7 +51,6 @@ const Content = () => {
         const occupancyOfEntry = currentEntryVisibleHeight / viewportHeight;
         const contactBreakPoint = viewportWidth > 768 ? 0.25 : 0.7;
         if ((id === 'contact' && occupancyOfEntry > contactBreakPoint) || occupancyOfEntry > 0.9) {
-          updateHash(id);
           setCurrentSection(id);
         }
       });
@@ -72,7 +70,6 @@ const Content = () => {
   }, [mainRef]);
 
   useEffect(() => {
-    updateHash('title');
   }, []);
 
   return (

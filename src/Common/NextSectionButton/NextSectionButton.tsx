@@ -15,6 +15,7 @@ const NextSectionButton = ({
   sections, currentSection,
 }: NextSectionButtonProps) => {
   const navigationButtonRef = useRef<HTMLDivElement>(null);
+  const clickTimerRef = useRef<number | null>(null);
   const [nextSection, setNextSection] = useState('');
 
   useEffect(() => {
@@ -31,16 +32,25 @@ const NextSectionButton = ({
   useEffect(() => {
     const idx = sections.findIndex((i) => i === currentSection);
     if (idx === sections.length - 1) {
-      setNextSection(sections[0]);
+      setNextSection(sections[1]);
     } else {
       setNextSection(sections[idx + 1]);
     }
   }, [sections, currentSection]);
 
+  const handleClick = () => {
+    const prevClickTime = +(clickTimerRef.current || 0);
+    const now = +new Date();
+    if (!prevClickTime || now - prevClickTime > 700) {
+      clickTimerRef.current = now;
+      scrollTo(nextSection);
+    }
+  };
+
   return (
-    <ScrollButtonContainer reverse={nextSection === 'title'}>
+    <ScrollButtonContainer reverse={currentSection === 'contact'}>
       <div ref={navigationButtonRef}>
-        <FiArrowDownCircle onClick={() => scrollTo(nextSection)} />
+        <FiArrowDownCircle onClick={handleClick} />
       </div>
     </ScrollButtonContainer>
   );

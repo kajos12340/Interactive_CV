@@ -2,7 +2,7 @@
 
 Personal website project.
 
-[Aplikacja](https://piotr-kajka.netlify.app/)
+[Application](https://piotr-kajka.netlify.app/)
 
 ## Technology Stack
 * React

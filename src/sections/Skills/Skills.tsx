@@ -27,7 +27,7 @@ const Skills = () => (
           </>
           )}
         icon={<FaNodeJs />}
-        technologies={['Node.js', 'Express', 'SQL', 'MongoDB', 'REST API', 'HTTP']}
+        technologies={['Node.js', 'Express', 'MongoDB', 'REST API', 'HTTP']}
       />
       <SkillTile
         title="Front-end"

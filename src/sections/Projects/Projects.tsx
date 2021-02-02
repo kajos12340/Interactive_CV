@@ -23,13 +23,13 @@ const projectsData: SingleProject[] = [
     title: 'LiftIT - body building training app',
   },
   {
-    description: 'I have created this application to make it easier to coordinate shopping with my fiancee. It enables us to add, remove and status products in real time, which makes our shopping much easier. To acquire this purpose application is based on WebSocket technology. Client site was created with TypeScript, React, Material-UI and Redux. Server side is Express REST API and SQL database.',
+    description: 'I have created this application to make it easier to coordinate shopping with my fiancee. It enables us to add, remove and status products in real time, which makes our shopping much easier. To acquire this purpose application is based on WebSocket technology. Client site was created with TypeScript, React, Material-UI and Redux. Server side is Express REST API and MongoDB database with Mongoose.',
     img: shopImg,
     links: (
       <>
-        <Button href="https://google.pl/">Website</Button>
-        <Button href="https://google.pl/">Github Front-end</Button>
-        <Button href="'https://google.pl/">Github Back-end</Button>
+        <Button href="https://epic-shopper.netlify.app/">Website</Button>
+        <Button href="https://github.com/kajos12340/epic-shoping-ui">Github Front-end</Button>
+        <Button href="https://github.com/kajos12340/epic-shopping.api">Github Back-end</Button>
       </>
     ),
     title: 'My shopping list',

@@ -31,11 +31,7 @@ const NextSectionButton = ({
 
   useEffect(() => {
     const idx = sections.findIndex((i) => i === currentSection);
-    if (idx === sections.length - 1) {
-      setNextSection(sections[1]);
-    } else {
-      setNextSection(sections[idx + 1]);
-    }
+    setNextSection(sections[(idx % (sections.length - 1)) + 1]);
   }, [sections, currentSection]);
 
   const handleClick = () => {

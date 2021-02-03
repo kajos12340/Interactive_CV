@@ -48,7 +48,6 @@ const Hobby = () => {
           <Icons />
         </MobileIcons>
       </Content>
-      {/* <NextSectionButton to="contact" rightAligned /> */}
     </Section>
   );
 };

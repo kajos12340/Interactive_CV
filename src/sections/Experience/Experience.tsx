@@ -59,7 +59,6 @@ const Experience = () => (
         ))}
       </Nodes>
     </Content>
-    {/* <NextSectionButton to="skills" rightAligned /> */}
   </Section>
 );
 

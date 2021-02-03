@@ -49,7 +49,6 @@ const Skills = () => (
         technologies={['Git', 'Jira', 'Bitbucket', 'Github', 'Git Flow', 'Netlify']}
       />
     </SkillTilesContainer>
-    {/* <NextSectionButton to="projects" rightAligned /> */}
     <br />
   </Section>
 );

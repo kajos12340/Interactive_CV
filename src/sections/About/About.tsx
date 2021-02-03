@@ -42,7 +42,6 @@ const About = () => (
         than terrified.
       </Description>
     </Content>
-    {/* <NextSectionButton to="experience" rightAligned /> */}
   </Section>
 );
 

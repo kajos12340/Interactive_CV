@@ -84,6 +84,8 @@
     "styled-components": "^5"
   },
   "devDependencies": {
+    "@types/greensock": "^1.15.32",
+    "@types/gsap": "^1.20.2",
     "@types/styled-components": "^5.1.7",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-import-resolver-typescript": "^2.3.0"

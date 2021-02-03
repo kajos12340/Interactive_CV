@@ -48,7 +48,6 @@ const Projects = () => (
   <Section id="projects" primaryColor contactHeight={false}>
     <SectionHeader title="Projects" />
     <Slider data={projectsData} />
-    {/* <NextSectionButton to="hobby" rightAligned /> */}
   </Section>
 );
 

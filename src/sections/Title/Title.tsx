@@ -7,12 +7,11 @@ import {
 
 const Title = () => {
   const scrollerRef = useRef<HTMLDivElement>(null);
-  const tlRef = useRef(null);
+  const tlRef = useRef<gsap.core.Timeline>();
 
   const setupScroller = () => {
     const scroller = scrollerRef.current;
     const singleScrollerChild = scroller?.children[0] as HTMLElement;
-    // @ts-ignore
     tlRef.current?.clear();
 
     if (!scroller || !singleScrollerChild) return;
@@ -21,7 +20,6 @@ const Title = () => {
     const tl = gsap.timeline({
       repeat: -1,
     });
-    // @ts-ignore
     tlRef.current = tl;
 
     tl.to(scroller, { y: -scrollerItemHeight, duration: 0.5, delay: 1 })
@@ -104,7 +102,6 @@ const Title = () => {
           </div>
         </div>
       </Content>
-      {/* <NextSectionButton to="about" /> */}
     </Container>
   );
 };

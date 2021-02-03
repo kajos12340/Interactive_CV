@@ -10,18 +10,8 @@ import Contact from '../sections/Contact/Contact';
 import Experience from '../sections/Experience/Experience';
 import NextSectionButton from '../Common/NextSectionButton/NextSectionButton';
 
-const getThresholdArray = () => {
-  const tresholdArray = [];
-  let i = 0.025;
-  while (i < 1) {
-    tresholdArray.push(i);
-    i += 0.025;
-  }
-  return tresholdArray;
-};
-
 const intersectionOptions = {
-  threshold: getThresholdArray(),
+  threshold: Array.from({ length: 40 }, (_, i) => (i + 1) * 0.025),
 };
 
 const Content = () => {
@@ -68,9 +58,6 @@ const Content = () => {
       });
     };
   }, [mainRef]);
-
-  useEffect(() => {
-  }, []);
 
   return (
     <main ref={mainRef}>

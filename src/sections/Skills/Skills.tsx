@@ -33,8 +33,11 @@ const Skills = () => (
         title="Front-end"
         description={(
           <>
-            Definitely branch of web development I feel most confident at. I&apos;ve spent nearly
-            three last years of my life creating GUI of huge banking CRM system.
+            Definitely branch of web development I feel
+            <span> most confident </span>
+            at. I&apos;ve spent nearly
+            <span> three last years </span>
+            of my life creating GUI of huge banking CRM system.
             Besides that I enjoy creating smaller and bigger private projects,
             to continuously increase my knowledge and skills.
           </>
